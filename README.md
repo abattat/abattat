@@ -1,5 +1,11 @@
 # Hi, I'm Andrew 👋
 
+<img
+  align="right"
+  src="https://github.com/user-attachments/assets/32e743fa-2458-4c2a-8710-ff6dace30ba1"
+  alt="IC-OS architecture"
+  width="200">
+
 I'm a systems software engineer specializing in distributed systems, operating systems, and confidential computing.
 
 For the past four years I worked at DFINITY building the operating systems that power the Internet Computer, a globally distributed blockchain running on 1,000+ independently operated nodes. My team owned the full node lifecycle — onboarding hardware, the custom Ubuntu-based OS, secure protocol upgrades, fleet management, and disaster recovery — and I worked mostly in Rust on low-level systems, virtualization, networking, and security.
