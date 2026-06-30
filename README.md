@@ -33,7 +33,7 @@ The projects below are representative examples of my work on IC-OS.
 I designed and shipped the recovery mechanism for the Internet Computer's root governance subnet (NNS). The system allows independent node operators to collaboratively recover the network without introducing a trusted recovery authority, preserving decentralization even during catastrophic failures.
 
 **Pull Requests**
-- [HostOS recovery upgrader #4993](https://github.com/dfinity/ic/pull/4993)
+- [HostOS recovery upgrader (#4993)](https://github.com/dfinity/ic/pull/4993)
 - [Recovery engine (#5355)](https://github.com/dfinity/ic/pull/5355)
 - [Nested VM integration tests (#5968)](https://github.com/dfinity/ic/pull/5968)
 - [Recovery console UX (#7655)](https://github.com/dfinity/ic/pull/7655)
