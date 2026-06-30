@@ -4,7 +4,7 @@
   align="right"
   src="https://github.com/user-attachments/assets/32e743fa-2458-4c2a-8710-ff6dace30ba1"
   alt="IC-OS architecture"
-  width="200">
+  width="165">
 
 I'm a systems software engineer specializing in distributed systems, operating systems, and confidential computing.
 
