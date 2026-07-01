@@ -61,8 +61,8 @@ This work established the root of trust for the Internet Computer's confidential
 
 **Relevant PRs**
 
-- [Verified hardware attestation during node registration (#8454)](https://github.com/dfinity/ic/pull/8454)
-- [Blessed-version verification during node registration (#8585)](https://github.com/dfinity/ic/pull/8585)
+- [Node registration attestation (#8454)](https://github.com/dfinity/ic/pull/8454)
+- [Blessed-version verification (#8585)](https://github.com/dfinity/ic/pull/8585)
 
 #### Secure GuestOS Upgrades (AMD SEV-SNP)
 
