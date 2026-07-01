@@ -22,7 +22,7 @@ The stack consists of three layers:
 - **HostOS** — minimal bare-metal operating system that launches and supervises the GuestOS virtual machine while remaining outside the protocol's trust boundary
 - **GuestOS** — trusted virtual machine that runs the Internet Computer protocol and hosts the system's trust boundary
 
-The projects below are representative examples of my work on IC-OS.
+Below are representative examples of my work on **IC-OS**.
 
 ---
 
@@ -32,7 +32,7 @@ The projects below are representative examples of my work on IC-OS.
 
 I designed and shipped the recovery mechanism for the Internet Computer's root governance subnet. The system allows independent node operators to collaboratively recover the network without introducing a trusted recovery authority, preserving decentralization even during catastrophic failures. Recovery succeeds only when a supermajority of the subnet's independent operators manually participate, turning the recovery process itself into a decentralized consensus mechanism. I designed both the recovery protocol and the supporting node software.
 
-**Pull Requests**
+**Relevant PRs**
 
 - [HostOS recovery upgrader (#4993)](https://github.com/dfinity/ic/pull/4993)
 - [Recovery engine (#5355)](https://github.com/dfinity/ic/pull/5355)
@@ -45,7 +45,7 @@ Access to the governance subnet runs through the API boundary nodes, which are t
 
 The change ships with a reproducible container build and a CI test that boots the image and proxies a live canister query end-to-end, verifying the recovery path still works before it is ever needed.
 
-**Pull Requests**
+**Relevant PRs**
 
 - [API boundary node recovery (#8832)](https://github.com/dfinity/ic/pull/8832)
 
@@ -59,10 +59,10 @@ As the fleet adopted AMD SEV-SNP trusted execution environments, each node's har
 
 This work established the root of trust for the Internet Computer's confidential computing rollout. Every later feature that trusts the registry value inherits the guarantee.
 
-**Pull Requests**
+**Relevant PRs**
 
 - [Verified hardware attestation during node registration (#8454)](https://github.com/dfinity/ic/pull/8454)
-- [Blessed-version verification during registration (#8585)](https://github.com/dfinity/ic/pull/8585)
+- [Blessed-version verification during node registration (#8585)](https://github.com/dfinity/ic/pull/8585)
 
 #### Secure GuestOS Upgrades (AMD SEV-SNP)
 
@@ -70,9 +70,7 @@ Upgrading a SEV-SNP GuestOS breaks access to the node's encrypted data by design
 
 This preserves the confidentiality of node state across upgrades, and guarantees that only a verified, registry-approved GuestOS can obtain the key.
 
-**Reference**
-
-- [Trusted Execution Environments: TEE-enabled GuestOS upgrades](https://learn.internetcomputer.org/hc/en-us/articles/46124920595988-Trusted-Execution-Environments#:~:text=Upgrades%20of%20TEE%2DEnabled%20GuestOS)
+**Reference:** [Trusted Execution Environments: TEE-enabled GuestOS upgrades](https://learn.internetcomputer.org/hc/en-us/articles/46124920595988-Trusted-Execution-Environments#:~:text=Upgrades%20of%20TEE%2DEnabled%20GuestOS)
 
 ---
 
@@ -82,7 +80,7 @@ This preserves the confidentiality of node state across upgrades, and guarantees
 
 Boundary nodes forward subnet `read_state` lookups to the replicas, and the same requests repeat constantly. I added an in-memory cache in the boundary node that serves these repeated lookups directly, cutting redundant load on the replicas. Only the safe read-only paths are cached, entries expire on a short TTL, and memory usage is bounded and tracked.
 
-**Pull Requests**
+**Relevant PRs**
 
 - [Subnet read_state cache (#9239)](https://github.com/dfinity/ic/pull/9239)
 
@@ -90,6 +88,9 @@ Boundary nodes forward subnet `read_state` lookups to the replicas, and the same
 
 ## Technologies
 
-**Languages** — Rust · Python · C++ · Bash
+## Technologies
 
-**Systems & tooling** — Linux · QEMU · systemd · A/B partitioning · systemd-networkd · Bazel · Docker · Prometheus · Grafana · SEV-SNP · remote attestation
+- **Languages:** Rust · Python · C++ · Bash
+- **Systems:** Linux · QEMU · systemd · systemd-networkd · A/B partitioning
+- **Infrastructure:** Docker · Bazel · Prometheus · Grafana
+- **Security:** AMD SEV-SNP · Remote Attestation
